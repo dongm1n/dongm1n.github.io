@@ -1,0 +1,69 @@
+body {
+  padding-top:50px;
+  background-color: grey;
+}
+.background-1 {
+  width: 100%;
+  height: 100%;
+  
+  background-image:url(https://www.ruthrumack.com/wp-content/uploads/2014/02/Abstract-Grey-Background.png);
+  background-size: cover;
+}
+.background-4 {
+  width: 100%;
+  height: 100%;
+  
+  background-image:url(http://i595.photobucket.com/albums/tt33/ChowderFan125/day_cartoonnetwork_homepagebackgroundi.jpg);
+  background-size: cover;
+}
+.background-2 {
+  width: 100%;
+  height: 100%;
+  
+  background-image:url(http://media.gettyimages.com/videos/pencil-holder-full-of-pencils-with-chalkboard-background-video-id92586854?s=640x640);
+  background-size: cover;
+}
+.thickborder {
+    border-color: grey;
+    border-width: 5px;
+    border-style: solid;
+  }
+.background-3 {
+  width: 100%;
+  height: 100%;
+  
+  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gY8e4-TR4RPU8yrKYUnCnIbsKFjb_uBJJ8K2OFRJsgEDmBZv);
+  background-size: cover;
+}
+.portfolio-screenshot {
+  max-width : 400px;
+  height: 305px;
+  background-color:white;
+  border-width: 5px;
+  border-style:solid;
+  border-color: black;
+  border-radius: 10px;
+}
+.background-grey {
+  background-color: grey;
+}
+.background-black{
+  background-color: black;
+
+}
+.textfontwhite{
+  color: white;
+}
+.jumbotron {
+  
+  color: white;
+  padding: 100px 25px;
+  text-shadow: 3px 3px 5px black;
+  background-color: grey;
+  margin-bottom: 0px;
+}
+.textfontwhite2{
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+}
