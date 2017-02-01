@@ -73,9 +73,9 @@ function getWeather(lat, lon, countryCode) {
       //determine F or C based on country and add temperature to the page.
       var fahrenheit = ['US', 'BS', 'BZ', 'KY', 'PL'];
       if (fahrenheit.indexOf(countryCode) > -1) {
-        $('#temperature').text(temp + '° F');
+        $('#temperature').text(temp + '째 F');
       } else {
-        $('#temperature').text(tempC + '° C');
+        $('#temperature').text(tempC + '째 C');
       }
 
       //write final weather conditions and wind information to the page
@@ -94,9 +94,9 @@ function getWeather(lat, lon, countryCode) {
 //toggle between celsius / fahrenheit
 $('#convert-button').click(function() {
   if ($('#temperature').text().indexOf('F') > -1) {
-    $('#temperature').text(tempC + '° C');
+    $('#temperature').text(tempC + '째 C');
   } else {
-    $('#temperature').text(temp + '° F');
+    $('#temperature').text(temp + '째 F');
   }
 
   this.blur(); // remove focus from the button

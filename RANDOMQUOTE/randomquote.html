@@ -1,7 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<main>
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="randomquote.css" rel="stylesheet">
+
+
+</head>
+
+
+
+
+
+<body>
   <div class="container center">
-    <div class="row">
+    <div id="appendQuote" class="row">
       <h3 class="title">Random Quote Machine</h3>
     </div>
     <div class="row main-content center">
@@ -41,9 +70,11 @@
     </div>
     <a class="new-quote-btn btn blue-grey lighten-5 black-text" onclick="getQuote()">Generate another quote!</a>
   </div>
-</main>
+</body>
 
-    
+
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="randomquote.js"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>
+</html>
