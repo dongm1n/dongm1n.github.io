@@ -1,78 +1,74 @@
-/* http://stackoverflow.com/questions/36985111/using-wikipedias-api-to-fetch-results-from-search-query */
-var apiURL = "https://en.wikipedia.org/w/api.php?callback=?";
+$(document).ready(function(){
 
-$(document).ready(function() {
-  $('#searchSubmit').click(function() {
-    $("#display-result").empty(); // clear prior search results 
-    $.getJSON(apiURL, {
-        action: 'query',
-        format: 'json',
-        inprop: "url",
-        formatversion: 2,
-        generator: 'search',
-        gsrsearch: $("input").val(),
-        gsrwhat: "text",
-        prop: 'extracts|info',
-        exsentences: 3,
-        exintro: "",
-        explaintext: "",        
-        exlimit: 20,
-      })
-      .success(function(response) {
-        console.log(response);
-        response.query.pages.forEach(function(resp) {
-          $('#display-result').append(
-            "<a href='" + resp.fullurl + "' target= '_blank'><div id='result' class='results'><h3>" + resp.title + "</h3><p = class='extract'>" + resp.extract + "</p></div>");
-        })
-      });
-  }); // search
-  
-  $('#randomPage').click(function() {
-    
-  }); // randomPage
-  
-/*  $('#randomSearch').click(function() {
-    $("#display-result").empty(); // clear prior search results 
-    $("input").val("");
-    $.getJSON(apiURL, {
-        action: 'query',
-        format: 'json',
-        inprop: "url",
-        formatversion: 2,
-        generator: 'random',
-        grnlimit: 10,
-        grnnamespace: 0,
-        prop: 'extracts|info',
-        exintro: "",
-        
-      })
-      .success(function(response) {
-        console.log(response);        
-        response.query.pages.forEach(function(resp) {
-            $('#display-result').append(
-              "<div id='result' class='results'><h3><a href='" + resp.fullurl + "' target= '_blank'>" + resp.title + "</p></div>");       
-        })
-      });
-    });
-*/
-  
-  // trigger submit on use of enter key
-  $("#input").keyup(function(event) {
-    if (event.keyCode == 13) {
-      $("#searchSubmit").click();
+  // Initialize search variable
+
+    var searchTerm='';
+
+    function search(){
+
+       console.log(searchTerm);
+
+       var url="https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch="+searchTerm+"&gsrlimit=10&prop=extracts&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
+
+       $.getJSON(url,function(json){
+
+           handleMyJSON(json);
+
+       });
+
+       function handleMyJSON(json){
+
+          console.log(JSON.stringify(json));
+          var temp=json.query.pages;
+          for(i in temp){
+
+             var pageId=temp[i].pageid;
+             var title=temp[i].title;
+             var extract=temp[i].extract;
+             var link="http://en.wikipedia.org/wiki/?curid="+pageId;
+             var html="<div class='well'><a href="+link+" target='_blank'><h2>"+title+"</h2><p>"+extract+"</p></a></div>";
+             $('.container').append(html);
+
+          }
+
+       }
+
     }
-  });
+
+    $('#search').keypress(function(e){
+
+         console.log(e.which);
+
+         if(e.which==13){
+
+            searchTerm=$('#search').val();
+            console.log(searchTerm);
+            // Reset container
+            $('.container').empty();
+
+            search();
+         }
+
+    });
+
+
 });
 
-/*
-// display results
-function processResult(apiResult) {
-  console.log(apiResult);
-  for (var i = 0; i < apiResult.query.search.length; i++) {
-    $('#display-result').append(
-      
-      "<div id='result' class='col-md-8 col-md-2-offset results'><p >" + apiResult.query.search[i].title + "</p><p = class='snippet'>" + apiResult.query.search[i].snippet + "</p></div>"
-);
-  }
-};
-*/
+
+/*$(document).ready(function(){
+   var searchTerm="India";
+   var url='https://en.wikipedia.org/w/api.php?action=opensearch&search='+searchTerm+'&limit=5&namespace=0&format=json&callback=?';
+   $.getJSON(url,function(json){
+       getUse fulInfo(json);
+   });
+   function getUsefulInfo(json){
+      var html="";
+      for(var i=0;i<5;++i){
+         html+="<a href='"+json[3][i]+"'><p>"+json[2][i]+"</p></a><br><br>";
+      }
+      displayHtml(html);
+   }
+   function displayHtml(html){
+    //   $('.results').html(html);
+   }
+});   */
