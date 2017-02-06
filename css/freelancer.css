@@ -194,6 +194,14 @@ section.success {
   background: #18BC9C;
   color: white;
 }
+section.skillsbg {
+  background: #BDBDBD;
+  color: white;
+  background-image: linear-gradient(rgba(9, 9, 9, 0.85), rgba(9, 9, 9, 0.85)), url("../img/ipadf.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+}
 @media (max-width: 767px) {
   section {
     padding: 75px 0;
@@ -507,4 +515,16 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+
+.skills_content{
+  align-items:center;
+  flex-wrap:wrap
+  }
+.skill_icon{
+width:90%;
+}
+.skills_content_skill{
+flex:0 1 33%;
+text-align:center
 }
