@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="randomquote.css" rel="stylesheet">
+
+
+</head>
+
+
+
+
+
+<body>
+  <div class="container center">
+    <div id="appendQuote" class="row">
+      <h3 class="title">Random Quote Machine</h3>
+    </div>
+    <div class="row main-content center">
+      <div class="col s4 offset-s4">
+        <div class="preloader-wrapper big active spinner" id="spinner">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 offset-s2">
+        <div id="quote-text" class="flow-text">
+          <p id="quote"></p>
+          <p><i id="author"></i></p>
+        </div>
+        <div id="quote-actions" class="row">
+          <div class="tooltipped col s3 offset-s3" data-position="bottom" data-tooltip="View the author on Wikipedia!">
+            <a id="wikiLink" target="_blank" rel="noopener noreferrer">
+              <img class="authorWiki" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Nohat-wiki-logo.png">
+            </a>
+          </div>
+          <div class="tooltipped col s3" data-position="bottom" data-tooltip="Tweet this quote!">
+            <a id="tweetLink" target="_blank" rel="noopener noreferrer">
+              <img class="shareQuote" src="https://pbs.twimg.com/profile_images/531381005165158401/bUJYaSO9.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="new-quote-btn btn blue-grey lighten-5 black-text" onclick="getQuote()">Generate another quote!</a>
+  </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="randomquote.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+</html>

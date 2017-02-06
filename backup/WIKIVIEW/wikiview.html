@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="wikiview.css" rel="stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<!--
+Highlight the use of API calls and utilize javascript, jquery.
+-->
+
+<script src="https://use.fontawesome.com/2605df8b93.js"></script>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<div class="container-fluid wrapper">
+  <div class="row pageTitle">
+    <div class="col-md-4 col-md-offset-4 title text-center">
+      <h1>Dongmin's Wikipedia Viewer</h1>
+    </div>
+  </div>
+  <div class="row titleNote">
+    <div class="col-md-6 col-md-offset-3 note text-center">
+      <h4>Search <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></h4>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-8 col-md-offset-2  text-center">
+      <input type="text" class="search_box" id="input" placeholder="Search Wikipedia">
+      <button type="submit" class="btn btn-default searchSubmit" id="searchSubmit">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+      <button type="submit" class="btn btn-default" id="randomPage"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+        Feelin' Lucky?</a>
+      </button>
+
+
+    </div>
+  </div>
+  <div id="display-result" class="col-md-6 col-md-offset-3 ">
+  </div>
+  <div class="push"></div>
+</div>
+<!-- end container-fluid -->
+<script src="wikiview.js"> </script>
