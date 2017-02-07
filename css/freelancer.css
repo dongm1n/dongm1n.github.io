@@ -194,6 +194,14 @@ section.success {
   background: #18BC9C;
   color: white;
 }
+section.portbg {
+  background: #BDBDBD;
+  color: white;
+  background-image: linear-gradient(rgba(9, 9, 9, 0.85), rgba(9, 9, 9, 0.85)), url("../img/bkground22.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+}
 section.skillsbg {
   background: #BDBDBD;
   color: white;
